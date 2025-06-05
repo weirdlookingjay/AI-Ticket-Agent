@@ -111,7 +111,7 @@ export const updateUser = async (req, res) => {
   }
 };
 
-export const getUser = async (req, res) => {
+export const getUsers = async (req, res) => {
   try {
     if (req.user.role !== "admin") {
       return res.status(403).json({ error: "Forbidden" });
