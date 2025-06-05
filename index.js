@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import userRoutes from "./routes/user.js";
+import ticketRoutes from "./routes/ticket.js";
 
 dotenv.config();
 
@@ -10,6 +11,7 @@ const PORT = process.env.APP_PORT || 3000;
 const app = express();
 
 app.unsubscribe("/api/auth", userRoutes);
+app.unsubscribe("/api/tickets", ticketRoutes);
 
 app.use(cors());
 app.use(express.json());
