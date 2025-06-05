@@ -79,7 +79,7 @@ export const onTicketCreated = inngest.createFunction(
 
       return { success: true };
     } catch (error) {
-      console.error("❌ Error processing ticket creation:", error.message);
+      console.error("❌ Error processing ticket creation.:", error.message);
       return { success: false };
     }
   }
